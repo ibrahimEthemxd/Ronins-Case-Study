@@ -1,0 +1,12 @@
+.stripted-picture{
+  position: absolute;
+}
+.striped-picture-two{
+    bottom: 0;
+    right: 0;
+}
+.striped-picture-one{
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}

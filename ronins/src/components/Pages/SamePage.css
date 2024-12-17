@@ -1,0 +1,81 @@
+.step-content .top{
+    margin-top: 2rem;
+}
+.step-content .top img{
+    width: 135px;
+    height: 135px;
+}
+.step-content .question{
+    color: var(--primary-color);
+}
+.step-content .middle .title{
+    font-size: 80px;
+    line-height: 100.8px;
+    font-weight: 400;
+    width: 590px;
+    height: 101px;
+}
+.step-content .middle .title p{
+    display: inline;
+    font-weight: bold;
+    letter-spacing: -4px;
+}
+.step-content .middle .title span{
+    font-weight: bold;
+}
+.step-content .middle .count span{
+    color: var(--primary-color);
+}
+.step-content .middle .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 590px;
+    text-align: center;
+    position: relative;
+
+}
+.step-content .middle .icons .icon{
+    opacity: 0.8;
+    width: 36px;
+}
+.step-content .middle .icons .icon-middle{
+   z-index: 500;
+}
+.step-content .middle .icons .icon-left{
+    position: absolute;
+    right: 245px;
+}
+.step-content .middle .icons .icon-right{
+    position: absolute;
+    left: 245px;
+}
+.step-content .middle .text span{
+    margin-top: 10px;
+}
+.step-content .middle .number-input input{
+    background-color: transparent;
+    border-bottom: 3px white solid ;
+    border-left: 2px white solid ;
+    border-right: 2px white solid ;
+    padding: 6px;
+    border-radius: 12px;
+    outline: 0;
+    color: var(--white-color);
+    margin-top: 1rem;
+    text-align: center;
+}
+.step-content .middle .number-input input::placeholder{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 100;
+}
+.step-content .middle .number-input input::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 20px; 
+    background: linear-gradient(to top, #fff, transparent);
+  }
