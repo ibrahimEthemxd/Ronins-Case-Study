@@ -1,0 +1,39 @@
+.step-content .value-counts{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.step-content .value-counts .second-number{
+   font-size: 45px;
+   font-weight: bold;
+   color: var(--primary-color);
+   margin-bottom: -12px;
+}
+.step-content .value-counts .second-text{
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--white-color);
+ }
+.step-content .text-content h2{
+    line-height: 60px;
+}
+.step-content .text-content h2 > span{
+   font-size: 120px;
+   color: var(--primary-color);
+   font-weight: bold;
+}
+.step-content .text-content p{
+    font-size: 18px;
+}
+.step-content  .number-input input{
+    background-color: transparent;
+    border-image: linear-gradient(to bottom, #000 20%, #fff 100%) 1;
+    border-width: 3px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    outline: 0;
+    color: var(--white-color);
+    margin-top: 1rem;
+    text-align: center;
+    margin-bottom: 100px;
+}

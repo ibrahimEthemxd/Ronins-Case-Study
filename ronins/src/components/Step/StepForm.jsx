@@ -4,7 +4,7 @@ import FinalPage from "../Pages/FinalPage";
 import Metamask from "../../../public/metamask.svg";
 import Twitter from "../../../public/twitter-x.svg";
 import Telegram from "../../../public/telegram.svg";
-import "./StepForm.css"
+import "./StepForm.css";
 
 const StepForm = () => {
   const [step, setStep] = useState(1);
@@ -35,9 +35,17 @@ const StepForm = () => {
   const { media, icon, finalPage } = getContent();
 
   return (
-    <div className="containerr">
-      <img src="../public/download.svg" alt="xd" className="striped-picture-one stripted-picture" />
-      <img src="../public/download.svg" alt="xd" className="striped-picture-two stripted-picture" />
+    <div className="container">
+      <img
+        src="../public/download.svg"
+        alt="xd"
+        className="striped-picture-one stripted-picture"
+      />
+      <img
+        src="../public/download.svg"
+        alt="xd"
+        className="striped-picture-two stripted-picture"
+      />
       {finalPage ? (
         <FinalPage />
       ) : (

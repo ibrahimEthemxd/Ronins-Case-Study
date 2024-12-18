@@ -1,0 +1,26 @@
+.next-btn {
+  background-color: #4BEA83;
+  color: black;
+  cursor: pointer;
+  padding: 12px 60px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  border-radius: 12px;
+}
+.next-btn.disabled {
+  background-color: #287744;
+  cursor: default;
+}
+
+.back-btn{
+    font-size: 15px;
+    padding: 18px 60px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-image: linear-gradient(to left, #000 20%, #fff 100%) 1;
+    border-width: 1px;
+    border-style: solid;
+    cursor: pointer;
+}
