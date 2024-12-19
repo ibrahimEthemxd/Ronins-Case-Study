@@ -14,25 +14,26 @@ const SamePage = ({
   showBack,
   step,
 }) => {
-  // Birden fazla adımın değerini tutan dizi
-  const [stepValues, setStepValues] = useState(["", "", "", ""]); // Varsayılan olarak 4 adım için boş değerler
+  const [stepValues, setStepValues] = useState(["", "", "", ""]); 
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    const updatedValues = [...stepValues];
-    updatedValues[step - 1] = value; // Şu anki adımın değerini güncelle
-    setStepValues(updatedValues); // Değeri güncelle
+    if (/^\d*$/.test(value) && value.length <= 5) {
+      const updatedValues = [...stepValues];
+      updatedValues[step - 1] = value; 
+      setStepValues(updatedValues); 
+    }
   };
 
   const handleNext = () => {
-    if (onNext) onNext(); // Next işlevini çağır
+    if (onNext) onNext(); 
   };
 
   const handleBack = () => {
-    if (onBack) onBack(); // Back işlevini çağır
+    if (onBack) onBack(); 
   };
 
-  const isDisabled = stepValues[step - 1] === ""; // Eğer şu anki adımda değer yoksa Next butonunu disabled yap
+  const isDisabled = stepValues[step - 1] === ""; 
 
   return (
     <div className="step-content">
@@ -99,8 +100,9 @@ const SamePage = ({
           <input
             type="text"
             placeholder="Enter a number"
-            value={stepValues[step - 1]} // Şu anki adımın değerini göster
+            value={stepValues[step - 1]} 
             onChange={handleInputChange}
+            maxLength={5}
           />
         </div>
       </motion.div>

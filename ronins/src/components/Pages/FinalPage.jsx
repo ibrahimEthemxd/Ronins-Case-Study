@@ -2,44 +2,53 @@ import { useState } from "react";
 import JoinBtn from "../Button/JoinBtn";
 import "./SamePage.css";
 import "./FinalPage.css";
+import "../Button/Button.css";
+import { motion } from "framer-motion";
+import Proptypes from "prop-types";
 
-const FinalPage = () => {
-  const [email, setEmail] = useState(""); // Email state
-  const [isDisabled, setIsDisabled] = useState(true); // Buton durumu
-  const [error, setError] = useState(""); // Hata mesajı için state
+const FinalPage = ({ onNext }) => {
+  const [email, setEmail] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [error, setError] = useState("");
 
-  // Email geçerliliğini kontrol eden regex
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
     return emailRegex.test(email);
   };
 
-  // Input değiştikçe çalışacak fonksiyon
   const handleInputChange = (e) => {
     const inputEmail = e.target.value;
-    setEmail(inputEmail); // Email state'ini güncelle
-
+    setEmail(inputEmail);
     if (validateEmail(inputEmail)) {
-      setIsDisabled(false); // Email geçerliyse buton aktif olur
-      setError(""); // Hata mesajını temizle
+      setIsDisabled(false);
+      setError("");
     } else {
-      setIsDisabled(true); // Email geçerli değilse butonu devre dışı bırak
-      setError("Please enter a valid email address."); // Hata mesajı göster
+      setIsDisabled(true);
+      setError("Lütfen geçerli email adresi girin!");
     }
   };
 
-  // Input'tan çıktığında email'i kontrol et
   const handleInputBlur = () => {
     if (!validateEmail(email) && email) {
-      setError("Please enter a valid email address.");
+      setError("Lütfen geçerli email adresi girin!");
     }
   };
 
+  const handleNext = () => {
+    console.log("selam");
+    if (onNext) onNext();
+  };
   return (
-    <div className="step-content">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.2 }}
+      className="step-content"
+    >
       <img
         src="../../../public/UNIQUE.svg"
         alt="unique"
+        className="unique-background"
         width={"1540px"}
         style={{ marginTop: "120px", position: "absolute" }}
       />
@@ -67,22 +76,23 @@ const FinalPage = () => {
         </h2>
         <p>Join the Waitlist. Earn points for Airdrop.</p>
       </div>
-      <div className="number-input">
+      <div className="email">
         <input
-          type="email" // Email tipi
+          type="email"
           placeholder="Enter an Email"
-          value={email} // State ile input'u bağladık
-          onChange={handleInputChange} // Değişim event'i
-          onBlur={handleInputBlur} // Blur event'i
+          value={email}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
         />
         {error && <p style={{ color: "red", fontSize: "12px" }}>{error}</p>}{" "}
-        {/* Hata mesajı */}
       </div>
       <div className="buttons">
         <div className="border">
           <button
+            style={{ zIndex: 15000, position: "relative" }}
             className={`next-btn btn ${isDisabled ? "disabled" : ""}`}
-            disabled={isDisabled} // Butonu kontrol ediyoruz
+            disabled={isDisabled}
+            onClick={handleNext}
           >
             <JoinBtn />
           </button>
@@ -106,8 +116,11 @@ const FinalPage = () => {
           <p className="text-count">Unique Users</p>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
-
 export default FinalPage;
+
+FinalPage.propTypes = {
+  onNext: Proptypes.func.isRequired,
+};
