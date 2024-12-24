@@ -127,19 +127,19 @@ const SamePage = ({
       </div>
       <div className="bottom">
         <div className="first">
-          <p className="num-count">6127</p>
+          <p className="num-count"></p>
+          <p className="text-count">Metamask Accounts</p>
+        </div>
+        <div className="first">
+          <p className="num-count"></p>
           <p className="text-count">Twitter Accounts</p>
         </div>
         <div className="first">
-          <p className="num-count">6127</p>
-          <p className="text-count">Twitter Accounts</p>
-        </div>
-        <div className="first">
-          <p className="num-count">6127</p>
-          <p className="text-count">Twitter Accounts</p>
+          <p className="num-count"></p>
+          <p className="text-count">Telegram Accounts</p>
         </div>
         <div className="first last">
-          <p className="num-count">6127</p>
+          <p className="num-count"></p>
           <p className="text-count">Unique Users</p>
         </div>
       </div>

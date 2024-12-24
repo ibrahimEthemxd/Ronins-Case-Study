@@ -14,7 +14,7 @@
     width: 135px;
     height: 135px;
     display: block;
-    margin-top: -102px;
+    margin-top: -90px;
 }
 .step-content .question{
     color: var(--primary-color);
@@ -26,14 +26,15 @@
 .step-content .middle .title{
     font-size: 78px;
     line-height: 80px;
-    font-weight: 300;
     width: 590px;
     height: 101px;
     font-stretch: expanded;
     transform: scaleX(1.3);
-    letter-spacing: -3px;
-    word-spacing: 8px;
+    letter-spacing: -2px;
+    word-spacing: 6px;
     margin-left: -110px;
+    margin-top: 10px;
+    font-weight: 100;
 }
 .step-content .middle .title p{
     display: inline;
@@ -41,7 +42,7 @@
     letter-spacing: -4px;
 }
 .step-content .middle .title span{
-    font-weight: bold;
+    font-weight: 700;
 }
 .step-content .middle .count{
     margin-top: -1rem;
@@ -78,6 +79,8 @@
 .step-content .middle .text{
     margin-bottom: 10px;
     margin-top: 10px;
+    font-weight: 500;
+    color: #fff;
 }
 .step-content .middle .text span{
     display: inline-block;
@@ -110,9 +113,12 @@
 }
 .step-content .buttons .border{
     border-image: linear-gradient(to right, #000 30%, #fff 100%) 1;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2), 
+    0 0 0 6px linear-gradient(to bottom, #000 20%, #fff 100%);
     border-width: 1px;
     padding: 4px;
     }
+    
 .step-content .bottom{
     display: flex;
     align-items: center;
@@ -120,19 +126,20 @@
     margin-top: 30px;
     opacity: 0.4;
     position: absolute;
-    bottom: 30px;
+    bottom: 50px;
 }
 .step-content .bottom .first{
     border-right: 1px solid gray;
-    padding: 0 52px;
+    padding: 0 70px;
 }
 .step-content .bottom .first .num-count{
     font-size: 30px;
     font-weight: bold;
 }
 .step-content .bottom .first .text-count{
-    font-size: 10px;
-    font-weight: 500;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
 }
 .step-content .bottom .last{
     border-right: 0;

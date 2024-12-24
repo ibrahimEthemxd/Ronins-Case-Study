@@ -15,8 +15,12 @@
     color: var(--white-color);
     margin-bottom: 10px;
  }
+ .step-content .text-content{
+    user-select: text;
+ }
 .step-content .text-content h2{
     line-height: 70px;
+    letter-spacing: -2px;
 }
 .step-content .text-content h2 > span{
    font-size: 130px;

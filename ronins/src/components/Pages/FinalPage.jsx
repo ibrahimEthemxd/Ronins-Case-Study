@@ -53,7 +53,7 @@ const FinalPage = ({ onNext }) => {
         style={{ marginTop: "120px", position: "absolute" }}
       />
       <div className="top">
-        <img src="../../../public/logo.svg" alt="logo" />
+        <img src="../../../public/logo.svg" style={{marginTop:"-70px"}} alt="logo" />
       </div>
       <div className="value-counts">
         <div className="counts">
@@ -100,19 +100,19 @@ const FinalPage = ({ onNext }) => {
       </div>
       <div className="bottom">
         <div className="first">
-          <p className="num-count">526131528</p>
+          <p className="num-count"></p>
+          <p className="text-count">Metamask Accounts</p>
+        </div>
+        <div className="first">
+          <p className="num-count"></p>
           <p className="text-count">Twitter Accounts</p>
         </div>
         <div className="first">
-          <p className="num-count">503161317</p>
-          <p className="text-count">Twitter Accounts</p>
-        </div>
-        <div className="first">
-          <p className="num-count">503140064</p>
-          <p className="text-count">Twitter Accounts</p>
+          <p className="num-count"></p>
+          <p className="text-count">Telegram Accounts</p>
         </div>
         <div className="first last">
-          <p className="num-count">17</p>
+          <p className="num-count"></p>
           <p className="text-count">Unique Users</p>
         </div>
       </div>
